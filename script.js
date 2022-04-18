@@ -36,6 +36,9 @@ function receiveMessages(){
                 type: arrayMessages[i].type,
                 time: arrayMessages[i].time,
             }
+
+            
+
             if (message[i].type==="message"){
                 
             msg[i]= `<div class="geral message1"><p>
@@ -48,7 +51,7 @@ function receiveMessages(){
             </div>`;
             }
 
-         
+        
 
                else if (message[i].type==="private_message"){
                 
@@ -74,7 +77,7 @@ function receiveMessages(){
                         </div>`;
                         }
             
-           if(message[i].type!=="private_message"||message[i].to===nickname.name){
+           if(message[i].type!=="private_message"||message[i].to===nickname.name || message[i].from===nickname.name){
                 
                 batePapo.innerHTML +=msg[i];
                 cont++;
