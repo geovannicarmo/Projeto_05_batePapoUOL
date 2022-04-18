@@ -165,7 +165,7 @@ function receiveMessages(){
     
         const requisicao = axios.post('https://mock-api.driven.com.br/api/v6/uol/messages', shippingRequisition);
     
-        
+        messageSent.value =""
     
         requisicao.then(enviada);
         requisicao.catch(noSend);
@@ -344,6 +344,12 @@ function selecionatype (tipoSelecionado){
     }
 
     
-    
+  document.addEventListener("keypress", function(e)
+  {
+      if(e.key === "Enter"){
+          const btn = document.querySelector("#sendE");
+          btn.click();
+      }
+  })  
     
   
